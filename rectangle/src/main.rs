@@ -1,6 +1,13 @@
-struct Rectangle(u32,u32);
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
 fn main() {
-    let rec1: Rectangle = Rectangle(30,80);
+    let rec1: Rectangle = Rectangle {
+        width: 30,
+        height: 80
+    };
 
     println!(
         "The area of the rectangle is {} square pixels.",
@@ -9,5 +16,5 @@ fn main() {
 }
 
 fn area (rec: Rectangle) -> u32 {
-    rec.0 * rec.1
+    rec.width * rec.height
 }
